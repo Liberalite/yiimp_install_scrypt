@@ -27,6 +27,7 @@ Connect on your VPS =>
 - NOT MANDATORY => sudo bash screen-stratum.sh (CONFIGURE BEFORE START this script... add or remove algo you use).
 
 ###########################
+
 site.com/phpmyadmin -> LOGIN => yiimpfrontend => coins => delete everything
 site.com/phpmyadmin -> LOGIN => yiimpfrontend => coins => delete everything
 
