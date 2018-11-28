@@ -33,6 +33,20 @@ site.com/phpmyadmin -> LOGIN => yiimpfrontend => rawcoins => delete everything
 sudo nano /var/web/serverconfig.php
   define('YAAMP_NOTIFY_NEW_COINS', false);
   define('YAAMP_CREATE_NEW_COINS', false);
+  
+sudo ufw allow 22
+sudo ufw allow 80
+sudo iptables -A INPUT -p tcp --dport 31020 -m state --state NEW -j ACCEPT
+sudo iptables -A INPUT -p udp --dport 31020 -m state --state NEW -j ACCEPT
+
+sudo iptables -A INPUT -p tcp --dport 30020 -m state --state NEW -j ACCEPT
+sudo iptables -A INPUT -p udp --dport 30020 -m state --state NEW -j ACCEPT
+
+sudo iptables -A OUTPUT -p tcp --dport 31020 -m state --state NEW -j ACCEPT
+sudo iptables -A OUTPUT -p udp --dport 31020 -m state --state NEW -j ACCEPT
+
+sudo iptables -A OUTPUT -p tcp --dport 30020 -m state --state NEW -j ACCEPT
+sudo iptables -A OUTPUT -p udp --dport 30020 -m state --state NEW -j ACCEPT
 ###########################
 
 Finish !
