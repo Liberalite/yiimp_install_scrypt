@@ -42,6 +42,14 @@ sudo iptables -A INPUT -p udp --dport 31020 -m state --state NEW -j ACCEPT
 sudo iptables -A INPUT -p tcp --dport 30020 -m state --state NEW -j ACCEPT
 sudo iptables -A INPUT -p udp --dport 30020 -m state --state NEW -j ACCEPT
 
+
+
+sudo iptables -A INPUT -p tcp --dport 3739 -m state --state NEW -j ACCEPT
+sudo iptables -A INPUT -p udp --dport 3739 -m state --state NEW -j ACCEPT
+
+sudo iptables -A OUTPUT -p tcp --dport 3739 -m state --state NEW -j ACCEPT
+sudo iptables -A OUTPUT -p udp --dport 3739 -m state --state NEW -j ACCEPT
+
 sudo iptables -A OUTPUT -p tcp --dport 31020 -m state --state NEW -j ACCEPT
 sudo iptables -A OUTPUT -p udp --dport 31020 -m state --state NEW -j ACCEPT
 
