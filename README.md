@@ -26,6 +26,15 @@ Connect on your VPS =>
 - sudo bash screen-scrypt.sh (in tuto youtube, i launch the scrypt with root... it does not matter)
 - NOT MANDATORY => sudo bash screen-stratum.sh (CONFIGURE BEFORE START this script... add or remove algo you use).
 
+###########################
+site.com/phpmyadmin -> LOGIN => yiimpfrontend => coins => delete everything
+site.com/phpmyadmin -> LOGIN => yiimpfrontend => coins => delete everything
+
+sudo nano /var/web/serverconfig.php
+  define('YAAMP_NOTIFY_NEW_COINS', false);
+  define('YAAMP_CREATE_NEW_COINS', false);
+###########################
+
 Finish !
 Go http://xxx.xxxxxx.xxx or https://xxx.xxxxxx.xxx (if you have chosen LetsEncrypt SSL). Enjoy !
 
