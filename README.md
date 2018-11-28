@@ -42,8 +42,6 @@ sudo iptables -A INPUT -p udp --dport 31020 -m state --state NEW -j ACCEPT
 sudo iptables -A INPUT -p tcp --dport 30020 -m state --state NEW -j ACCEPT
 sudo iptables -A INPUT -p udp --dport 30020 -m state --state NEW -j ACCEPT
 
-
-
 sudo iptables -A INPUT -p tcp --dport 3739 -m state --state NEW -j ACCEPT
 sudo iptables -A INPUT -p udp --dport 3739 -m state --state NEW -j ACCEPT
 
@@ -55,6 +53,9 @@ sudo iptables -A OUTPUT -p udp --dport 31020 -m state --state NEW -j ACCEPT
 
 sudo iptables -A OUTPUT -p tcp --dport 30020 -m state --state NEW -j ACCEPT
 sudo iptables -A OUTPUT -p udp --dport 30020 -m state --state NEW -j ACCEPT
+
+copy stratum folder to every wallet
+add ip instead of 127.0.0.1/0 in external wallet
 ###########################
 
 Finish !
