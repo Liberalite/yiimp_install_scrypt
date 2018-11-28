@@ -27,9 +27,8 @@ Connect on your VPS =>
 - NOT MANDATORY => sudo bash screen-stratum.sh (CONFIGURE BEFORE START this script... add or remove algo you use).
 
 ###########################
-
 site.com/phpmyadmin -> LOGIN => yiimpfrontend => coins => delete everything
-site.com/phpmyadmin -> LOGIN => yiimpfrontend => coins => delete everything
+site.com/phpmyadmin -> LOGIN => yiimpfrontend => rawcoins => delete everything
 
 sudo nano /var/web/serverconfig.php
   define('YAAMP_NOTIFY_NEW_COINS', false);
