@@ -27,6 +27,12 @@ Connect on your VPS =>
 - NOT MANDATORY => sudo bash screen-stratum.sh (CONFIGURE BEFORE START this script... add or remove algo you use).
 
 ###########################
+POOL VIDEOS 
+https://www.youtube.com/watch?v=NcMAqSdZKa0&t=1236s
+https://www.youtube.com/watch?v=n3__bpARLkY
+https://www.youtube.com/watch?v=__C4mDA4SEc
+https://www.youtube.com/watch?v=XRdLY0K9Bs4
+###########################
 site.com/phpmyadmin -> LOGIN => yiimpfrontend => coins => delete everything
 site.com/phpmyadmin -> LOGIN => yiimpfrontend => rawcoins => delete everything
 
@@ -34,9 +40,16 @@ sudo nano /var/web/serverconfig.php
   define('YAAMP_NOTIFY_NEW_COINS', false);
   define('YAAMP_CREATE_NEW_COINS', false);
   
+###########################
+FIREWALL SETUP UBUNTU 16.04
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-16-04
+https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server
+CHECK IF PORT IS OPENED 
+https://serverfault.com/questions/309052/check-if-port-is-open-or-closed-on-a-linux-server
+https://askubuntu.com/questions/928191/how-to-open-a-closed-port-in-ubuntu
+  
 sudo ufw allow 22
 sudo ufw allow 80
-sudo ufw allow 3306
 sudo iptables -A INPUT -p tcp --dport 31020 -m state --state NEW -j ACCEPT
 sudo iptables -A INPUT -p udp --dport 31020 -m state --state NEW -j ACCEPT
 
@@ -63,10 +76,12 @@ Also (to see if it's running):
 
 telnet 127.0.0.1 3306 
 
-MYSQL
+MYSQL - port 3306
 https://www.digitalocean.com/community/tutorials/how-to-backup-mysql-databases-on-an-ubuntu-vps
 https://www.configserverfirewall.com/ubuntu-linux/enable-mysql-remote-access-ubuntu/
 https://www.techrepublic.com/article/how-to-set-up-mysql-for-remote-access-on-ubuntu-server-16-04/
+sudo ufw allow 3306
+sudo iptables -A INPUT -m state --state NEW -m tcp -p tcp --dport 3306 -j ACCEPT
 
 INSTALL PHPMYADMIN
 https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-16-04
