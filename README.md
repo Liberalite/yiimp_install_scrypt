@@ -44,7 +44,8 @@ sudo nano /var/web/serverconfig.php
 FIREWALL SETUP UBUNTU 16.04
 https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-16-04
 https://www.digitalocean.com/community/tutorials/how-to-setup-a-firewall-with-ufw-on-an-ubuntu-and-debian-cloud-server
-CHECK IF PORT IS OPENED 
+
+PORTS - OPEN OR CLOSE
 https://serverfault.com/questions/309052/check-if-port-is-open-or-closed-on-a-linux-server
 https://askubuntu.com/questions/928191/how-to-open-a-closed-port-in-ubuntu
   
@@ -67,7 +68,8 @@ sudo iptables -A OUTPUT -p udp --dport 31020 -m state --state NEW -j ACCEPT
 
 sudo iptables -A OUTPUT -p tcp --dport 30020 -m state --state NEW -j ACCEPT
 sudo iptables -A OUTPUT -p udp --dport 30020 -m state --state NEW -j ACCEPT
-HSMs
+###########################
+
 copy stratum folder to every wallet
 add ip instead of 127.0.0.1/0 in external wallet
 
