@@ -36,6 +36,7 @@ sudo nano /var/web/serverconfig.php
   
 sudo ufw allow 22
 sudo ufw allow 80
+sudo ufw allow 3306
 sudo iptables -A INPUT -p tcp --dport 31020 -m state --state NEW -j ACCEPT
 sudo iptables -A INPUT -p udp --dport 31020 -m state --state NEW -j ACCEPT
 
@@ -53,9 +54,23 @@ sudo iptables -A OUTPUT -p udp --dport 31020 -m state --state NEW -j ACCEPT
 
 sudo iptables -A OUTPUT -p tcp --dport 30020 -m state --state NEW -j ACCEPT
 sudo iptables -A OUTPUT -p udp --dport 30020 -m state --state NEW -j ACCEPT
-
+HSMs
 copy stratum folder to every wallet
 add ip instead of 127.0.0.1/0 in external wallet
+
+mysql -h 127.0.0.1 -P 3306 -u root -p <database>
+Also (to see if it's running):
+
+telnet 127.0.0.1 3306 
+
+MYSQL
+https://www.digitalocean.com/community/tutorials/how-to-backup-mysql-databases-on-an-ubuntu-vps
+https://www.configserverfirewall.com/ubuntu-linux/enable-mysql-remote-access-ubuntu/
+https://www.techrepublic.com/article/how-to-set-up-mysql-for-remote-access-on-ubuntu-server-16-04/
+
+INSTALL PHPMYADMIN
+https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-16-04
+
 ###########################
 
 Finish !
