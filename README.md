@@ -73,6 +73,11 @@ sudo iptables -A OUTPUT -p udp --dport 30020 -m state --state NEW -j ACCEPT
 copy stratum folder to every wallet
 add ip instead of 127.0.0.1/0 in external wallet
 
+##########################
+sudo apt-get update
+sudo apt-get install aptitude
+
+##########################
 mysql -h 127.0.0.1 -P 3306 -u root -p <database>
 Also (to see if it's running):
 
