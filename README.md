@@ -68,7 +68,17 @@ sudo iptables -A OUTPUT -p udp --dport 31020 -m state --state NEW -j ACCEPT
 
 sudo iptables -A OUTPUT -p tcp --dport 30020 -m state --state NEW -j ACCEPT
 sudo iptables -A OUTPUT -p udp --dport 30020 -m state --state NEW -j ACCEPT
+
 ###########################
+DAEMON SERVER
+###########################
+sudo apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils
+
+sudo add-apt-repository ppa:bitcoin/bitcoin
+sudo apt-get update
+sudo apt-get install libdb4.8-dev libdb4.8++-dev
+
+sudo apt-get install libminiupnpc-dev
 
 copy stratum folder to every wallet
 add ip instead of 127.0.0.1/0 in external wallet
