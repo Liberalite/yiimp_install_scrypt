@@ -79,6 +79,7 @@ sudo apt-get update
 sudo apt-get install libdb4.8-dev libdb4.8++-dev
 
 sudo apt-get install libminiupnpc-dev
+sudo apt-get install libboost-all-dev
 
 copy stratum folder to every wallet
 add ip instead of 127.0.0.1/0 in external wallet
